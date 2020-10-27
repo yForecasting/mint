@@ -48,16 +48,67 @@ For Mint you will need following for installing devtools:
 
 > sudo apt install libcurl4-openssl-dev
 
-## Install Gitkraken
-Gitkraken is a version control management software. It can be installed via the software manager or via: 
+## Install Smartgit
+SmartGit is a version control management software. 
+
+> sudo apt-get install gdebi
+> wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
+> sudo gdebi smartgit-17_0_1.deb
+
+### (OR Install Gitkraken)
+Gitkraken is an alternative for smartgit. It can be installed via the software manager or via: 
 
 > wget https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
 
 > sudo tar -xvzf gitkraken-amd64.tar.g
 
-## Repair broken packages
+### (Repair broken packages)
 Not all goes perfect the first time, so in case something brakes down:
 
 > sudo apt update --fix-missing
 
 > sudo apt install -f
+
+## Install DBeaver
+DBeaver is a database explorer, which visualises all accessible tables via the database scheme. It also enables easy querying of different sources. Supports MySQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird and Derby.
+
+First update the linux:
+
+> sudo apt update 
+
+> sudo apt upgrade
+
+DBeaver requires java:
+
+To check the current version:
+
+> java --version
+
+To install Java:
+
+> sudo add-apt-repository ppa:linuxuprising/java
+
+> sudo apt install oracle-java12-installer
+
+Add the DBeaver repository:
+
+> wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
+
+> echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+
+Install DBeaver now:
+
+> sudo apt update && sudo apt install dbeaver-ce
+
+Test DBeaver:
+
+> sudo apt install mariadb-server
+
+> sudo mysql -u root -p
+> CREATE DATABASE dbeaver;
+> GRANT ALL PRIVILEGES ON dbeaver.* TO 'dbeaveruser'@'localhost' IDENTIFIED BY 'dbeaverpss';
+> FLUSH PRIVILEGES;
+> exit;
+
+
+
