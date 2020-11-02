@@ -1,6 +1,9 @@
 # Linux Mint
 This is a brief introduction how to get started with Linux Mint for data science and academic research. 
 
+To see your current version of Mint, use in the terminal:
+
+> cat /etc/os-release
 
 ## Install R
 Install R via the terminal:
@@ -110,5 +113,47 @@ Test DBeaver:
 > FLUSH PRIVILEGES;
 > exit;
 
+## Ethernet card
+To see all cards:
 
+> lshw -C network
+
+To see if your card is up:
+> inxi -Fxxxz
+
+You'll see the logical name e.g. eno1. To activate your card:
+
+> sudo ifconfig eno1 up
+
+or as a selection:
+
+> lspci -nn|grep Ethernet
+
+To restart network manager:
+> sudo service network-manager restart
+
+## Community
+
+https://community.linuxmint.com/software
+
+## System Tools
+
+### Search files
+
+> find <dir> -iname <file*>
+
+> locate -i <filename*>
+> sudo updatedb
+
+### Remote access
+To install TeamViewer on a 64 bit system:
+
+> wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+> sudo dpkg -i teamviewer_amd64.deb
+
+If you have errors, try first:
+> sudo apt-get install -f
+
+To run:
+> teamviewer
 
