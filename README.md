@@ -7,12 +7,7 @@ To see your current version of Mint, use in the terminal:
 
 ## Install R
 Install R via the terminal:
-> sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-
-> sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran35/'
-
 > sudo apt update
-
 > sudo apt-get install r-base
 
 You can test R by simply: 
@@ -23,8 +18,8 @@ You can test R by simply:
 > q()
 
 ## Install Rstudio
-get the name of the last Ubuntu/Debian Rstudio version at https://rstudio.com/products/rstudio/download/#download
-> wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.959-amd64.deb
+get the name of the last Ubuntu/Debian Rstudio version at https://rstudio.com/products/rstudio/download/#download Do a right-click, copy file location. 
+> wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
 
 If needed to install gdebi:
 
@@ -93,12 +88,6 @@ To install Java:
 
 > sudo apt install oracle-java12-installer
 
-Add the DBeaver repository:
-
-> wget -O - https://dbeaver.io/debs/dbeaver.gpg.key | sudo apt-key add -
-
-> echo "deb https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
-
 Install DBeaver now:
 
 > sudo apt update && sudo apt install dbeaver-ce
@@ -131,10 +120,28 @@ or as a selection:
 
 To restart network manager:
 > sudo service network-manager restart
+or 
+> sudo systemctl restart NetworkManager.service
+or 
+> sudo nmcli networking off
+> sudo nmcli networking on
+or
+> sudo ifdown -a && sudo ifup -a
+or graphically with 
+> nmtui
 
 ## Community
 
 https://community.linuxmint.com/software
+
+## Belgium eID
+
+Copy link from website https://eid.belgium.be/en/linux-eid-software-installation
+
+Then execute:
+> wget https://eid.belgium.be/sites/default/files/software/eid-archive_2020.2_all_2.deb
+
+Then check the PGP key and install
 
 ## System Tools
 
