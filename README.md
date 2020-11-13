@@ -46,6 +46,50 @@ And if this results in errors, then try:
 > sudo apt install libcurl4-openssl-dev
 
 ### Install pyCharm
+For pyCharm, do not use the Software Manager, as this version is often outdated. Use the jetBrains website instead, and preferrably install via the tar. 
+
+Go to your download location and then use the recommended installation location according to the filesystem hierarchy standard (FHS). --> is /opt. To install PyCharm into this directory, enter the following command:
+
+> sudo tar xzf pycharm-*.tar.gz -C /opt/
+
+Switch to the bin subdirectory with the terminal.
+> cd /opt/pycharm-*/bin
+
+Run pyCharm from this directory.
+
+> sh pycharm.sh
+
+After a graphical configuration setup, you get the standard IDE. 
+If an error occured beacaus the Python interpreter could not be installed, then do:
+*  Configure Python interpreter
+*  Add interpreter
+*  System interpreter
+*  Select the latest Python version
+*  OK
+
+You'll notice none of the frequent packages are installed (try import numpy).
+First install pip in the terminal:
+> sudo apt update
+> sudo apt install python3-pip python3-pip
+
+Then install the package in the terminal:
+> pip3 install numpy
+
+You can now see the package installed in pyCharm
+Go to File > Settings > Project > Python interpreter
+
+To add a desktop shortcut:
+*  Desktop > RM > New Launcher
+*  Command > Browse > go to /opt/pycharm*/bin/pycharm.sh
+*  Command: type sh before the path
+*  Fill in Name, Comment, Picture as you like
+*  Say Yes to add to Menu as well.
+
+
+Installing additional packages can now also be done in the terminal in pyCharm.
+
+For your information:
+The alternative install of pyCharm via snap is no longer supported from Mint 20 onwards. Yes, there is a workaround and this gives away admin privileges to snap.
 
 ## Resource Management Tools
 ### Install Smartgit
