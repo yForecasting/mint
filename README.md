@@ -5,7 +5,8 @@ To see your current version of Mint, use in the terminal:
 
 > cat /etc/os-release
 
-## Install R
+## Programming Tools
+### Install R
 Install R via the terminal:
 > sudo apt update
 > sudo apt-get install r-base
@@ -17,7 +18,7 @@ You can test R by simply:
 
 > q()
 
-## Install Rstudio
+### Install Rstudio
 get the name of the last Ubuntu/Debian Rstudio version at https://rstudio.com/products/rstudio/download/#download Do a right-click, copy file location. 
 > wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
 
@@ -30,44 +31,46 @@ Then install the deb-file:
 > sudo gdebi rstudio-1.3.959-amd64.deb
 
 The R-file here installs all basic needed packages. You can open and run it in Rstudio.
-
 In case of errors, you can use:
 > apt install r-cran-stringi 
-
 And if this results in errors, then try: 
 > sudo apt purge -y r-base r-base-core r-base-dev
-
 > sudo apt install -y r-base r-base-core r-base-dev
 
-For Mint you will need following for installing devtools: 
+
+! For Mint you will need following for installing devtools: 
 > sudo apt install libxml2-dev
 
 > sudo apt install libssl-dev
 
 > sudo apt install libcurl4-openssl-dev
 
-## Install Smartgit
+### Install pyCharm
+
+## Resource Management Tools
+### Install Smartgit
 SmartGit is a version control management software. 
 
 > sudo apt-get install gdebi
 > wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
 > sudo gdebi smartgit-17_0_1.deb
 
-### (OR Install Gitkraken)
+#### (OR Install Gitkraken)
 Gitkraken is an alternative for smartgit. It can be installed via the software manager or via: 
 
 > wget https://release.gitkraken.com/linux/gitkraken-amd64.tar.gz
 
 > sudo tar -xvzf gitkraken-amd64.tar.g
 
-### (Repair broken packages)
+#### (Repair broken packages)
 Not all goes perfect the first time, so in case something brakes down:
 
 > sudo apt update --fix-missing
 
 > sudo apt install -f
 
-## Install DBeaver
+## Datebase Tools
+### Install DBeaver
 DBeaver is a database explorer, which visualises all accessible tables via the database scheme. It also enables easy querying of different sources. Supports MySQL, MariaDB, SQLite, Oracle, DB2, SQL Server, Sybase, MS Access, Teradata, Firebird and Derby.
 
 First update the linux:
@@ -102,7 +105,8 @@ Test DBeaver:
 > FLUSH PRIVILEGES;
 > exit;
 
-## Ethernet card
+## Help with System issues
+### Ethernet card
 To see all cards:
 
 > lshw -C network
@@ -130,11 +134,7 @@ or
 or graphically with 
 > nmtui
 
-## Community
-
-https://community.linuxmint.com/software
-
-## Belgium eID
+### Belgium eID
 
 Copy link from website https://eid.belgium.be/en/linux-eid-software-installation
 
@@ -142,15 +142,6 @@ Then execute:
 > wget https://eid.belgium.be/sites/default/files/software/eid-archive_2020.2_all_2.deb
 
 Then check the PGP key and install
-
-## System Tools
-
-### Search files
-
-> find <dir> -iname <file*>
-
-> locate -i <filename*>
-> sudo updatedb
 
 ### Remote access
 To install TeamViewer on a 64 bit system:
@@ -163,4 +154,24 @@ If you have errors, try first:
 
 To run:
 > teamviewer
+
+## Community
+
+https://community.linuxmint.com/software
+
+
+## Fast terminal commands
+
+### Search files
+
+> find <dir> -iname <file*>
+
+> locate -i <filename*>
+> sudo updatedb
+
+### Update
+You can set updates to install automatically in the update manager, but if you are solving a problem, these commands can help to start with:
+> sudo apt update 
+> sudo apt upgrade
+
 
