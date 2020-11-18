@@ -178,6 +178,13 @@ or
 or graphically with 
 > nmtui
 
+#### Put driver together with kernel
+Download the driver from https://downloadcenter.intel.com/download/15817, currently 3.2.4.2 (as shown in lshw -C above)
+> make install in the src folder
+> rmmod e1000e
+> modprobe e1000e
+> and to make the new driver survive a reboot update-initramfs -u
+
 ### Belgium eID
 
 Copy link from website https://eid.belgium.be/en/linux-eid-software-installation
@@ -217,5 +224,43 @@ https://community.linuxmint.com/software
 You can set updates to install automatically in the update manager, but if you are solving a problem, these commands can help to start with:
 > sudo apt update 
 > sudo apt upgrade
+
+## Productivity Tools
+### GIT in terminal
+> sudo apt-get install git
+
+### f.lux
+Latest version: https://github.com/xflux-gui/fluxgui
+Install instructions:
+
+> sudo apt-get install python3-pexpect python3-distutils gir1.2-appindicator3-0.1 gir1.2-gtk-3.0
+Download fluxgui, install system wide
+> cd /tmp
+> git clone "https://github.com/xflux-gui/fluxgui.git"
+> cd fluxgui
+> ./download-xflux.py
+> sudo ./setup.py install --record installed.txt
+
+Run flux
+> fluxgui
+
+### yEd Graph Editor
+Download on https://www.yworks.com/products/yed/download#download
+
+Change permissions of the .sh file before installing it:
+> chmod +x yEd-3.17.2_64-bit_setup.sh
+> ./yEd-3.17.2_64-bit_setup.sh
+
+
+### AutoKey GTK
+
+### Printer
+When CUPS is giving problems:
+> sudo systemctl stop cups-browsed
+> sudo systemctl disable cups-browsed
+Download driver from https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=074w2&oscode=1204a&productcode=dell-e525w-printer 
+> unzip Printer_E525w_Driver_Dell_A00_Linux.zip
+> sudo apt install ./dell-color-mfp-e525w_1.0-28_all.deb
+
 
 
