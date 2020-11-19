@@ -226,6 +226,9 @@ You can set updates to install automatically in the update manager, but if you a
 > sudo apt upgrade
 
 ## Productivity Tools
+### Create pop-up message with a timer in terminal 
+> sleep 15m; zenity --question --text "Time to go!"; echo $?
+
 ### GIT in terminal
 > sudo apt-get install git
 
