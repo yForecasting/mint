@@ -99,6 +99,11 @@ SmartGit is a version control management software.
 > wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
 > sudo gdebi smartgit-17_0_1.deb
 
+You need to install git as well:
+> sudo apt-get install git
+> sudo add-apt-repository ppa:git-core/ppa 
+> sudo apt update; apt install git
+
 #### (OR Install Gitkraken)
 Gitkraken is an alternative for smartgit. It can be installed via the software manager or via: 
 
@@ -256,6 +261,36 @@ Change permissions of the .sh file before installing it:
 
 
 ### AutoKey GTK
+
+
+#### Google Translate
+Install NodeJS:
+> curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+> sudo apt-get install -y nodejs
+
+Install Yarn
+> curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+> echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+> sudo apt-get update
+> sudo apt-get install yarn
+
+Install DeepL Translator CLI
+> yarn global add deepl-translator-cli
+> deepl --version
+oi
+
+> deepl translate -t 'DE' 'How do you do?'
+
+> echo 'How do you do?' | deepl translate -t 'DE'
+
+> deepl detect 'Wie geht es Ihnen?'
+
+> deepl -h
+> deepl translate -h
+> deepl detect -h
+
+
+
 
 ### Printer
 When CUPS is giving problems:
