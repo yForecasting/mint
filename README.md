@@ -93,11 +93,11 @@ The alternative install of pyCharm via snap is no longer supported from Mint 20 
 
 ## Resource Management Tools
 ### Install Smartgit
-SmartGit is a version control management software. 
+SmartGit is a version control management software. The flatpack version has the most readable interface. 
 
 > sudo apt-get install gdebi
 > wget https://www.syntevo.com/downloads/smartgit/smartgit-20_2_2.deb
-> sudo gdebi smartgit-17_0_1.deb
+> sudo gdebi smartgit-20_2_2.deb
 
 You need to install git as well:
 > sudo apt-get install git
