@@ -96,13 +96,26 @@ The alternative install of pyCharm via snap is no longer supported from Mint 20 
 SmartGit is a version control management software. 
 
 > sudo apt-get install gdebi
-> wget http://www.syntevo.com/static/smart/download/smartgit/smartgit-17_0_1.deb
+> wget https://www.syntevo.com/downloads/smartgit/smartgit-20_2_2.deb
 > sudo gdebi smartgit-17_0_1.deb
 
 You need to install git as well:
 > sudo apt-get install git
 > sudo add-apt-repository ppa:git-core/ppa 
 > sudo apt update; apt install git
+
+
+Alternatively, via tar.gz bundle...
+
+First, unpack the downloaded file into a directory of your choice (don't unpack over an existing installation!):
+> tar xzf <smartgit*.tar.gz>
+start SmartGit: invoke 
+> bin/smartgit.sh
+create SmartGit menu item: invoke
+> bin/add-menuitem.sh
+remove SmartGit menu item: invoke
+> bin/remove-menuitem.sh
+
 
 #### (OR Install Gitkraken)
 Gitkraken is an alternative for smartgit. It can be installed via the software manager or via: 
@@ -198,6 +211,10 @@ Then execute:
 > wget https://eid.belgium.be/sites/default/files/software/eid-archive_2020.2_all_2.deb
 
 Then check the PGP key and install
+
+Update via:
+> sudo apt-get update
+> sudo apt-get install eid-mw eid-viewer
 
 ### Remote access
 To install TeamViewer on a 64 bit system:
