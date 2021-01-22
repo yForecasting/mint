@@ -236,11 +236,37 @@ https://community.linuxmint.com/software
 ## Fast terminal commands
 
 ### Search files
-
+#### FIND
 > find <dir> -iname <file*>
+> find <dir> -name <file*>
 
-> locate -i <filename*>
+#### LOCATE
+Update search DB:
 > sudo updatedb
+Info on DB:
+> locate -S
+
+
+basic search:
+> locate <*part_file_name*>
+
+lower and uppercase search:
+> locate -i <filename*>
+
+Exactly meeting the name:
+> locate -r /findfile$
+
+Count number of hits:
+> locate -c <*part_file_name*>
+
+### Open a file (with default program) via terminal
+Use tab for autocomplete
+> xdg-open <filename>
+
+### Terminal variables
+> fl = $(locate "*keyword1*keyword2*")
+> echo "$fl"
+> xdg-open $fl
 
 ### Update
 You can set updates to install automatically in the update manager, but if you are solving a problem, these commands can help to start with:
