@@ -79,6 +79,12 @@ First install pip in the terminal:
 Then install the package in the terminal:
 > pip3 install numpy
 
+Other useful packages to install are:
+* numpy
+* pandas
+* matplotlib
+* bs4
+
 You can now see the package installed in pyCharm
 Go to File > Settings > Project > Python interpreter
 
@@ -89,6 +95,7 @@ To add a desktop shortcut:
 *  Fill in Name, Comment, Picture as you like
 *  Say Yes to add to Menu as well.
 
+In these settings, the shortcut for executing one line of code can be set as well: File > Settings > Keymap > Other > Execute selection --> set to Ctrl+Enter or ² 
 
 Installing additional packages can now also be done in the terminal in pyCharm.
 
