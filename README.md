@@ -46,7 +46,7 @@ And if this results in errors, then try:
 > sudo apt install libcurl4-openssl-dev
 
 ### Install pyCharm
-For pyCharm, do not use the Software Manager, as this version is often outdated. Use the jetBrains website instead, and preferrably install via the tar. 
+For pyCharm, do not use the Software Manager, as this version is often outdated. Use the [jetBrains](https://www.jetbrains.com/products/#lang=python) website instead, and preferrably install via the tar. 
 
 Go to your download location and then use the recommended installation location according to the filesystem hierarchy standard (FHS). --> is /opt. To install PyCharm into this directory, enter the following command:
 
