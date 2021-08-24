@@ -9,6 +9,7 @@ To see your current version of Mint, use in the terminal:
 ### Install R
 Install R via the terminal:
 > sudo apt update
+
 > sudo apt-get install r-base
 
 You can test R by simply: 
@@ -33,8 +34,10 @@ Then install the deb-file:
 The R-file here installs all basic needed packages. You can open and run it in Rstudio.
 In case of errors, you can use:
 > apt install r-cran-stringi 
+
 And if this results in errors, then try: 
 > sudo apt purge -y r-base r-base-core r-base-dev
+
 > sudo apt install -y r-base r-base-core r-base-dev
 
 
@@ -70,6 +73,7 @@ If an error occured because the Python interpreter could not be installed, then 
 You'll notice none of the frequent packages are installed (try import numpy).
 First install pip in the terminal:
 > sudo apt update
+
 > sudo apt install python3-pip python3-pip
 
 Then install the package in the terminal:
@@ -96,12 +100,16 @@ The alternative install of pyCharm via snap is no longer supported from Mint 20 
 SmartGit is a version control management software. The flatpack version has the most readable interface. 
 
 > sudo apt-get install gdebi
+
 > wget https://www.syntevo.com/downloads/smartgit/smartgit-20_2_2.deb
+
 > sudo gdebi smartgit-20_2_2.deb
 
 You need to install git as well:
 > sudo apt-get install git
+
 > sudo add-apt-repository ppa:git-core/ppa 
+
 > sudo apt update; apt install git
 
 
@@ -109,10 +117,13 @@ Alternatively, via tar.gz bundle...
 
 First, unpack the downloaded file into a directory of your choice (don't unpack over an existing installation!):
 > tar xzf <smartgit*.tar.gz>
+
 start SmartGit: invoke 
 > bin/smartgit.sh
+
 create SmartGit menu item: invoke
 > bin/add-menuitem.sh
+
 remove SmartGit menu item: invoke
 > bin/remove-menuitem.sh
 
@@ -162,9 +173,13 @@ Test DBeaver:
 > sudo apt install mariadb-server
 
 > sudo mysql -u root -p
+
 > CREATE DATABASE dbeaver;
+
 > GRANT ALL PRIVILEGES ON dbeaver.* TO 'dbeaveruser'@'localhost' IDENTIFIED BY 'dbeaverpss';
+
 > FLUSH PRIVILEGES;
+
 > exit;
 
 ## Help with System issues
@@ -186,21 +201,29 @@ or as a selection:
 
 To restart network manager:
 > sudo service network-manager restart
+
 or 
 > sudo systemctl restart NetworkManager.service
+
 or 
 > sudo nmcli networking off
+
 > sudo nmcli networking on
+
 or
 > sudo ifdown -a && sudo ifup -a
+
 or graphically with 
 > nmtui
 
 #### Put driver together with kernel
 Download the driver from https://downloadcenter.intel.com/download/15817, currently 3.2.4.2 (as shown in lshw -C above)
 > make install in the src folder
+
 > rmmod e1000e
+
 > modprobe e1000e
+
 > and to make the new driver survive a reboot update-initramfs -u
 
 ### Belgium eID
@@ -214,12 +237,14 @@ Then check the PGP key and install
 
 Update via:
 > sudo apt-get update
+
 > sudo apt-get install eid-mw eid-viewer
 
 ### Remote access
 To install TeamViewer on a 64 bit system:
 
 > wget https://download.teamviewer.com/download/linux/teamviewer_amd64.deb
+
 > sudo dpkg -i teamviewer_amd64.deb
 
 If you have errors, try first:
@@ -238,11 +263,13 @@ https://community.linuxmint.com/software
 ### Search files
 #### FIND
 > find <dir> -iname <file*>
+
 > find <dir> -name <file*>
 
 #### LOCATE
 Update search DB:
 > sudo updatedb
+
 Info on DB:
 > locate -S
 
@@ -265,12 +292,15 @@ Use tab for autocomplete
 
 ### Terminal variables
 > fl = $(locate "*keyword1*keyword2*")
+
 > echo "$fl"
+
 > xdg-open $fl
 
 ### Update
 You can set updates to install automatically in the update manager, but if you are solving a problem, these commands can help to start with:
 > sudo apt update 
+
 > sudo apt upgrade
 
 ## Productivity Tools
@@ -285,11 +315,16 @@ Latest version: https://github.com/xflux-gui/fluxgui
 Install instructions:
 
 > sudo apt-get install python3-pexpect python3-distutils gir1.2-appindicator3-0.1 gir1.2-gtk-3.0
+
 Download fluxgui, install system wide
 > cd /tmp
+
 > git clone "https://github.com/xflux-gui/fluxgui.git"
+
 > cd fluxgui
+
 > ./download-xflux.py
+
 > sudo ./setup.py install --record installed.txt
 
 Run flux
@@ -300,6 +335,7 @@ Download on https://www.yworks.com/products/yed/download#download
 
 Change permissions of the .sh file before installing it:
 > chmod +x yEd-3.17.2_64-bit_setup.sh
+
 > ./yEd-3.17.2_64-bit_setup.sh
 
 
@@ -309,16 +345,21 @@ Change permissions of the .sh file before installing it:
 #### Google Translate
 Install NodeJS:
 > curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+
 > sudo apt-get install -y nodejs
 
 Install Yarn
 > curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+
 > echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
 > sudo apt-get update
+
 > sudo apt-get install yarn
 
 Install DeepL Translator CLI
 > yarn global add deepl-translator-cli
+
 > deepl --version
 oi
 
@@ -329,7 +370,9 @@ oi
 > deepl detect 'Wie geht es Ihnen?'
 
 > deepl -h
+
 > deepl translate -h
+
 > deepl detect -h
 
 
@@ -338,9 +381,12 @@ oi
 ### Printer
 When CUPS is giving problems:
 > sudo systemctl stop cups-browsed
+
 > sudo systemctl disable cups-browsed
+
 Download driver from https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=074w2&oscode=1204a&productcode=dell-e525w-printer 
 > unzip Printer_E525w_Driver_Dell_A00_Linux.zip
+
 > sudo apt install ./dell-color-mfp-e525w_1.0-28_all.deb
 
 
