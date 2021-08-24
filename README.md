@@ -60,7 +60,7 @@ Run pyCharm from this directory.
 > sh pycharm.sh
 
 After a graphical configuration setup, you get the standard IDE. 
-If an error occured beacaus the Python interpreter could not be installed, then do:
+If an error occured because the Python interpreter could not be installed, then do:
 *  Configure Python interpreter
 *  Add interpreter
 *  System interpreter
