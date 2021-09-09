@@ -134,6 +134,8 @@ create SmartGit menu item: invoke
 remove SmartGit menu item: invoke
 > bin/remove-menuitem.sh
 
+SmartGit authentication: 
+> Edit - Preferences - Hosting Providers. On your Hosting Providers, click add. Select hosting (Github), click Generate API Token automatically opens browser and generates token then copy go back to your SmartGit then paste the token and finally click add and OK.
 
 #### (OR Install Gitkraken)
 Gitkraken is an alternative for smartgit. It can be installed via the software manager or via: 
