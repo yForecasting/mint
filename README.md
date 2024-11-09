@@ -398,6 +398,9 @@ Download driver from https://www.dell.com/support/home/en-us/drivers/driversdeta
 
 > sudo apt install ./dell-color-mfp-e525w_1.0-28_all.deb
 
+
+More extra info on https://opensource.com/article/21/8/add-printer-linux
+
 ### Check CPU/RAM usage
 To see the CPU and RAM usage
 > top
