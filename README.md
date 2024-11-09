@@ -398,5 +398,10 @@ Download driver from https://www.dell.com/support/home/en-us/drivers/driversdeta
 
 > sudo apt install ./dell-color-mfp-e525w_1.0-28_all.deb
 
+### Check CPU/RAM usage
+To see the CPU and RAM usage
+> top
 
+To see the amount of RAM available
+> free -h
 
