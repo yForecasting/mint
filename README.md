@@ -12,6 +12,10 @@ Install R via the terminal:
 
 > sudo apt-get install r-base
 
+For developers: compile R packages from source
+
+> sudo apt-get install r-base-dev 
+
 You can test R by simply: 
 > R
 
