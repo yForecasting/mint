@@ -23,6 +23,10 @@ You can test R by simply:
 
 > q()
 
+Problems with installing packages, do:
+
+> sudo apt install libcurl4-openssl-dev
+
 ### Install Rstudio
 get the name of the last Ubuntu/Debian Rstudio version at https://rstudio.com/products/rstudio/download/#download Do a right-click, copy file location. 
 > wget https://download1.rstudio.org/desktop/bionic/amd64/rstudio-1.3.1093-amd64.deb
