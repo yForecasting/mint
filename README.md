@@ -26,6 +26,8 @@ You can test R by simply:
 Problems with installing packages, do:
 
 > sudo apt install libcurl4-openssl-dev
+> sudo apt install libssl-dev
+> sudo apt install cmake
 
 ### Install Rstudio
 get the name of the last Ubuntu/Debian Rstudio version at https://rstudio.com/products/rstudio/download/#download Do a right-click, copy file location. 
