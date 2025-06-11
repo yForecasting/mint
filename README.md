@@ -418,3 +418,20 @@ To see the CPU and RAM usage
 To see the amount of RAM available
 > free -h
 
+---
+
+## Remote
+
+### Access linux from remote terminal
+
+> ssh root@your-pc-dns-name
+> R
+> install.packages("forecast")
+
+### Download files
+
+> scp root@your-pc-dns-name:dir/file.csv Downloads/file.csv
+
+### Upload files
+
+> scp Downloads/file_to_transfer.csv root@your-pc-dns-name:dir/data/datafile.csv
