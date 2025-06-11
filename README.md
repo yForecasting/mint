@@ -424,9 +424,14 @@ To see the amount of RAM available
 
 ### Access linux from remote terminal
 
-> ssh root@your-pc-dns-name
+```
+ssh root@your-pc-dns-name
 > R
-> install.packages("forecast")
+>>> install.packages("forecast")
+>>> q()
+> exit
+exit
+```
 
 ### Download files
 
@@ -435,3 +440,14 @@ To see the amount of RAM available
 ### Upload files
 
 > scp Downloads/file_to_transfer.csv root@your-pc-dns-name:dir/data/datafile.csv
+
+### Basic linux terminal commands
+
+```
+mkdir new_directory
+ls
+dir
+rm file_to_remove.csv
+mv file_to_move dir_to_move_it_to
+```
+
