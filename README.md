@@ -58,6 +58,13 @@ And if this results in errors, then try:
 
 > sudo apt install libcurl4-openssl-dev
 
+### Install python package 
+
+Replace package with the name of the package.
+
+> sudo apt install python3-package
+
+
 ### Install pyCharm
 For pyCharm, do not use the Software Manager, as this version is often outdated. Use the [jetBrains](https://www.jetbrains.com/products/#lang=python) website instead, and preferrably install via the tar. 
 
