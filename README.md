@@ -425,6 +425,9 @@ To see the CPU and RAM usage
 To see the amount of RAM available
 > free -h
 
+Nice visualisation (colored)
+> htop
+
 ---
 
 ## Remote
